@@ -1,0 +1,492 @@
+Uri: http://shitie.ru/
+File Name: C:\Downloaded Web Sites\shitie.ru\index.htm
+Content Type: text/html
+
+Uri: http://shitie.ru/apple-touch-icon.png
+File Name: C:\Downloaded Web Sites\shitie.ru\apple-touch-icon.png
+Content Type: image/png
+
+Uri: http://shitie.ru/arhangelsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\arhangelsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/astrahan.php
+File Name: C:\Downloaded Web Sites\shitie.ru\astrahan.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/A_digital_illustration_in_soft,_warm,_pastel_color.png
+File Name: C:\Downloaded Web Sites\shitie.ru\A_digital_illustration_in_soft,_warm,_pastel_color.png
+Content Type: image/png
+
+Uri: http://shitie.ru/A_flat-style_digital_illustration_accompanies_a_se.png
+File Name: C:\Downloaded Web Sites\shitie.ru\A_flat-style_digital_illustration_accompanies_a_se.png
+Content Type: image/png
+
+Uri: http://shitie.ru/A_flat-style_digital_illustration_features_two_fem.png
+File Name: C:\Downloaded Web Sites\shitie.ru\A_flat-style_digital_illustration_features_two_fem.png
+Content Type: image/png
+
+Uri: http://shitie.ru/balashiha.php
+File Name: C:\Downloaded Web Sites\shitie.ru\balashiha.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/barnaul.php
+File Name: C:\Downloaded Web Sites\shitie.ru\barnaul.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/chelyabinsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\chelyabinsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/ekaterinburg.php
+File Name: C:\Downloaded Web Sites\shitie.ru\ekaterinburg.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/favicon-16x16.png
+File Name: C:\Downloaded Web Sites\shitie.ru\favicon-16x16.png
+Content Type: image/png
+
+Uri: http://shitie.ru/favicon-32x32.png
+File Name: C:\Downloaded Web Sites\shitie.ru\favicon-32x32.png
+Content Type: image/png
+
+Uri: http://shitie.ru/goroda.php
+File Name: C:\Downloaded Web Sites\shitie.ru\goroda.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/himki.php
+File Name: C:\Downloaded Web Sites\shitie.ru\himki.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/index1.jpg
+File Name: C:\Downloaded Web Sites\shitie.ru\index1.jpg
+Content Type: image/jpeg
+
+Uri: http://shitie.ru/index4.jpg
+File Name: C:\Downloaded Web Sites\shitie.ru\index4.jpg
+Content Type: image/jpeg
+
+Uri: http://shitie.ru/index5.jpg
+File Name: C:\Downloaded Web Sites\shitie.ru\index5.jpg
+Content Type: image/jpeg
+
+Uri: http://shitie.ru/index6.jpg
+File Name: C:\Downloaded Web Sites\shitie.ru\index6.jpg
+Content Type: image/jpeg
+
+Uri: http://shitie.ru/index7.jpg
+File Name: C:\Downloaded Web Sites\shitie.ru\index7.jpg
+Content Type: image/jpeg
+
+Uri: http://shitie.ru/irkutsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\irkutsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/ivanovo.php
+File Name: C:\Downloaded Web Sites\shitie.ru\ivanovo.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/izhevsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\izhevsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/kaliningrad.php
+File Name: C:\Downloaded Web Sites\shitie.ru\kaliningrad.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/kazan.php
+File Name: C:\Downloaded Web Sites\shitie.ru\kazan.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/kemerovo.php
+File Name: C:\Downloaded Web Sites\shitie.ru\kemerovo.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/kirov.php
+File Name: C:\Downloaded Web Sites\shitie.ru\kirov.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/kovrov.php
+File Name: C:\Downloaded Web Sites\shitie.ru\kovrov.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/krasnodar.php
+File Name: C:\Downloaded Web Sites\shitie.ru\krasnodar.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/krasnoyarsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\krasnoyarsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/kurgan.php
+File Name: C:\Downloaded Web Sites\shitie.ru\kurgan.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/lipetsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\lipetsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/logo.png
+File Name: C:\Downloaded Web Sites\shitie.ru\logo.png
+Content Type: image/png
+
+Uri: http://shitie.ru/lyubertsy.php
+File Name: C:\Downloaded Web Sites\shitie.ru\lyubertsy.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/moskva.php
+File Name: C:\Downloaded Web Sites\shitie.ru\moskva.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/mytishchi.php
+File Name: C:\Downloaded Web Sites\shitie.ru\mytishchi.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/naberezhnye-chelny.php
+File Name: C:\Downloaded Web Sites\shitie.ru\naberezhnye-chelny.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/nizhnii-novgorod.php
+File Name: C:\Downloaded Web Sites\shitie.ru\nizhnii-novgorod.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/novokuznetsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\novokuznetsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/novosibirsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\novosibirsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/omsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\omsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/orenburg.php
+File Name: C:\Downloaded Web Sites\shitie.ru\orenburg.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/orsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\orsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/penza.php
+File Name: C:\Downloaded Web Sites\shitie.ru\penza.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/perm.php
+File Name: C:\Downloaded Web Sites\shitie.ru\perm.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/privacy.php
+File Name: C:\Downloaded Web Sites\shitie.ru\privacy.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/rostov-na-donu.php
+File Name: C:\Downloaded Web Sites\shitie.ru\rostov-na-donu.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/ryazan.php
+File Name: C:\Downloaded Web Sites\shitie.ru\ryazan.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/samara.php
+File Name: C:\Downloaded Web Sites\shitie.ru\samara.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/sankt-peterburg.php
+File Name: C:\Downloaded Web Sites\shitie.ru\sankt-peterburg.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/saratov.php
+File Name: C:\Downloaded Web Sites\shitie.ru\saratov.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/scripts1.js
+File Name: C:\Downloaded Web Sites\shitie.ru\scripts1.js
+Content Type: application/javascript
+
+Uri: http://shitie.ru/script_skidka.js
+File Name: C:\Downloaded Web Sites\shitie.ru\script_skidka.js
+Content Type: application/javascript
+
+Uri: http://shitie.ru/site.webmanifest
+File Name: C:\Downloaded Web Sites\shitie.ru\site.webmanifest
+Content Type: 
+
+Uri: http://shitie.ru/stavropol.php
+File Name: C:\Downloaded Web Sites\shitie.ru\stavropol.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/styles.css
+File Name: C:\Downloaded Web Sites\shitie.ru\styles.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=1001
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-11.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=1009
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-12.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=1125
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-8.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=1365
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-36.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=1388
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-17.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=1600
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-40.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=2041
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-29.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=2578
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-4.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=2718
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-13.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=2868
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-35.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=2905
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-41.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=3171
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-44.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=3484
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-42.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=3794
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-6.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=3824
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-39.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=3828
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-48.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=4042
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-18.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=4175
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-24.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=4334
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-7.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=4716
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-32.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=4739
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-45.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=4784
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-20.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=4902
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-28.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=5633
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-2.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=5675
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-38.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=5826
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-34.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6004
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-46.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6061
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-31.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6189
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-30.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6316
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-15.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6343
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-37.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6652
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-27.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6678
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-43.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6846
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-1.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=6891
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-23.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=7071
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-9.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=7547
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-22.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=7697
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-5.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=7800
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-25.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=8305
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-33.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=8916
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-10.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=8978
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-16.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=9012
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-26.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=9029
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-19.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=9181
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-47.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=9566
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-3.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=9597
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-49.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=9748
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-14.css
+Content Type: text/css
+
+Uri: http://shitie.ru/styles.css?v=9833
+File Name: C:\Downloaded Web Sites\shitie.ru\styles-21.css
+Content Type: text/css
+
+Uri: http://shitie.ru/surgut.php
+File Name: C:\Downloaded Web Sites\shitie.ru\surgut.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/tolyatti.php
+File Name: C:\Downloaded Web Sites\shitie.ru\tolyatti.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/tomsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\tomsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/tula.php
+File Name: C:\Downloaded Web Sites\shitie.ru\tula.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/tver.php
+File Name: C:\Downloaded Web Sites\shitie.ru\tver.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/tyumen.php
+File Name: C:\Downloaded Web Sites\shitie.ru\tyumen.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/ufa.php
+File Name: C:\Downloaded Web Sites\shitie.ru\ufa.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/ulyanovsk.php
+File Name: C:\Downloaded Web Sites\shitie.ru\ulyanovsk.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/vladimir.php
+File Name: C:\Downloaded Web Sites\shitie.ru\vladimir.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/vladivostok.php
+File Name: C:\Downloaded Web Sites\shitie.ru\vladivostok.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/volgograd.php
+File Name: C:\Downloaded Web Sites\shitie.ru\volgograd.php.html
+Content Type: text/html
+
+Uri: http://shitie.ru/voronezh.php
+File Name: C:\Downloaded Web Sites\shitie.ru\voronezh.php.html
+Content Type: text/html
+
+Uri: https://cdn.jsdelivr.net/npm/chart.js
+File Name: C:\Downloaded Web Sites\shitie.ru\npm\chart.js
+Content Type: application/javascript
+
+Uri: https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap
+File Name: C:\Downloaded Web Sites\shitie.ru\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf
+File Name: C:\Downloaded Web Sites\shitie.ru\s\montserrat\v29\JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf
+Content Type: font/ttf
+
+Uri: https://mc.yandex.ru/watch/102057061
+File Name: C:\Downloaded Web Sites\shitie.ru\watch\102057061
+Content Type: image/gif
+
+Uri: https://www.transparenttextures.com/patterns/asfalt-light.png
+File Name: C:\Downloaded Web Sites\shitie.ru\patterns\asfalt-light.png
+Content Type: image/png
+
+Uri: https://www.transparenttextures.com/patterns/cubes.png
+File Name: C:\Downloaded Web Sites\shitie.ru\patterns\cubes.png
+Content Type: image/png
+

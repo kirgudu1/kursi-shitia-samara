@@ -1,0 +1,2859 @@
+﻿@import url('css2');
+
+
+/* ======== Общие стили ======== */
+body {
+    font-family: Arial, sans-serif;
+    /* Шрифт сайта */
+    background: #f5f5f5 url("patterns/cubes.png");
+    /* Текстура */
+    color: #333;
+    /* Основной цвет текста */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* Убираем горизонтальную прокрутку */
+}
+
+
+
+/* ======== Хитроссылки (партнёрские, невидимые для поисковиков) ======== */
+[data-cta-url] {
+    cursor: pointer;
+}
+
+/* ======== Верхнее меню (желтая полоса) ======== */
+.top-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #ffcc00;
+    /* Основной жёлтый цвет */
+    background-image: url('patterns/asfalt-light.png');
+    /* Текстура */
+    background-size: auto;
+    background-repeat: repeat;
+    padding: 10px 20px;
+    /* Уменьшаем отступы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    /* Была 60px, теперь 50px */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    margin-right: 20px;
+}
+
+.top-menu {
+    display: flex;
+    gap: 15px;
+    margin-left: 120px;
+    /* Добавляем отступ слева */
+}
+
+/* ======== Новый шрифт для горизонтального меню ======== */
+
+.top-menu a {
+    font-family: 'Montserrat', sans-serif;
+    /* Стильный, современный шрифт */
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.top-menu a:hover {
+    color: #ff6600;
+    /* Оранжевый при наведении */
+}
+
+
+/* ======== Кнопка бургер-меню (для мобильных) ======== */
+.burger-menu {
+    font-size: 32px;
+    cursor: pointer;
+    display: none;
+    /* Прячем на десктопе */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
+    /* Поверх всего */
+}
+
+/* ======== Боковое меню (НЕ перекрывает футер) ======== */
+.sidebar {
+    width: 250px;
+    background: #fff;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 80px;
+    /* Высота верхнего меню */
+    left: 0;
+    padding-top: 20px;
+    max-height: calc(80% - 50px);
+    overflow-y: auto;
+    z-index: 1000;
+    /* Повышаем приоритет */
+}
+
+
+
+/* ======== ТОП-блоки (чтобы не перекрывали меню) ======== */
+.sushi-ranking {
+    position: relative;
+    /* Убедимся, что не fixed или absolute */
+    z-index: 10;
+    /* Уменьшаем, чтобы меню было выше */
+}
+
+
+
+/* ======== Заголовок меню (Навигация) ======== */
+.side-menu h3 {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff4444;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #ffcc00;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* ======== Список навигации ======== */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ======== Пункты меню ======== */
+.side-menu li {
+    padding: 6px 10px;
+    /* Уменьшили внутренний отступ */
+    border-bottom: 1px solid #f0f0f0;
+    /*white-space: nowrap;  Запрещаем перенос строк */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Обрезка текста с троеточием, если не помещается */
+}
+
+/* ======== Ссылки навигации ======== */
+.side-menu li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: normal;
+    display: block;
+    transition: 0.3s;
+    padding: 4px 0;
+}
+
+.side-menu li a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* ======== Адаптация для мобильных (до 768px) ======== */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+
+    .side-menu h3 {
+        font-size: 13px;
+        /* Заголовок ещё меньше */
+    }
+
+    .side-menu li {
+        font-size: 11px !important;
+        /* Минимальный размер шрифта, чтобы помещалось */
+        padding: 5px 8px;
+        /* Минимальные отступы */
+    }
+}
+
+/* ======== Боковое меню (по умолчанию скрыто на мобильных) ======== */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+
+/* ======== Кнопка закрытия бокового меню (крестик) ======== */
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ff4444;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar .close-btn:hover {
+    color: #ff0000;
+}
+
+
+
+
+
+/* ======== Основной контент ======== */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    max-width: 80%;
+    margin-top: 60px !important;
+    /* Отступ ровно под верхнее меню */
+    padding-top: 0 !important;
+    overflow-y: auto;
+}
+
+
+/* ======== На мобильных уменьшаем отступ ======== */
+@media (max-width: 768px) {
+    .content {
+        margin-top: 5px !important;
+        /* На мобильных ещё меньше */
+    }
+}
+
+/* ======== Чтобы футер НЕ перекрывался ======== */
+.content {
+    min-height: calc(100vh - 120px);
+    /* Гарантируем, что контент не будет слишком коротким */
+    padding-bottom: 40px;
+    /* Запасной отступ, чтобы футер не наезжал */
+}
+
+/* ======== Ссылки в боковом меню ======== */
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.side-menu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.side-menu a:hover {
+    background: #ffcc00;
+    color: black;
+}
+
+/* ======== Карточка ресторана ======== */
+.sushi-block {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.sushi-block h2 {
+    color: #ff4444;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+.sushi-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sushi-block ul li {
+    padding: 7px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sushi-block strong {
+    color: #222;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.sushi-block a {
+    color: #ff4444;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sushi-block a:hover {
+    text-decoration: underline;
+}
+
+/* ======== Секции в карточке ======== */
+.sushi-section {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sushi-section h3 {
+    color: #333;
+    font-size: 20px;
+    border-left: 4px solid #ffcc00;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* ======== Преимущества и недостатки ======== */
+.advantage-list,
+.disadvantage-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.advantage-list li {
+    background: #dfffd6;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #2b7a0b;
+    display: flex;
+    align-items: center;
+}
+
+.disadvantage-list li {
+    background: #ffd6d6;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #a50b0b;
+    display: flex;
+    align-items: center;
+}
+
+/* ======== Кнопка "Сделать заказ" ======== */
+.order-button {
+    display: block;
+    width: 250px;
+    margin: 20px auto 0;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Эффект пульсации кнопки */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 102, 0, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+    }
+}
+
+.order-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 102, 0, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+/* Эффект волны при клике */
+.order-button:active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+
+
+
+
+/* ======== Адаптация для планшетов (макс. 1024px) ======== */
+@media (max-width: 1024px) {
+    .content {
+        max-width: 90%;
+        margin-left: 230px;
+    }
+
+    .sidebar {
+        width: 230px;
+    }
+}
+
+/* ======== Адаптация для мобильных (макс. 768px) ======== */
+@media (max-width: 768px) {
+
+    /* Показываем бургер-меню */
+    .burger-menu {
+        display: block;
+        right: 50px !important;
+        /* Сдвигаем левее */
+        font-size: 32px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1002;
+        padding-left: 10px;
+        /* Сдвигаем иконку левее */
+        text-align: left;
+        /* Выравниваем значок влево */
+    }
+
+    /* Прячем верхнее горизонтальное меню */
+    .top-menu {
+        display: none;
+    }
+
+    /* Прячем сайдбар (он будет открываться при клике на бургер) */
+    .sidebar {
+        transform: translateX(-100%);
+        width: 200px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #fff;
+        padding-top: 60px;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    /* Когда меню открыто */
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    /* Контент теперь занимает всю ширину */
+    .content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    /* Уменьшаем карточку ресторана */
+    .sushi-block {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    /* Уменьшаем кнопку */
+    .order-button {
+        width: 200px;
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* ======== Адаптация для маленьких экранов (макс. 480px) ======== */
+@media (max-width: 480px) {
+    .burger-menu {
+        right: 15px;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .sushi-block {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .sushi-block h2 {
+        font-size: 20px;
+    }
+
+    .order-button {
+        width: 180px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* ======== Заголовок страницы города ======== */
+.city-header {
+    text-align: center;
+    margin-top: 5px;
+    /* Уменьшили отступ сверху */
+    margin-bottom: 20px;
+    /* Оставили небольшой отступ перед списком доставок */
+    padding: 5px;
+}
+
+.city-header h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #444;
+    /* Тёмно-серый цвет, гармонирующий со стилем сайта */
+    margin-bottom: 5px;
+}
+
+.city-header p {
+    font-size: 16px;
+    color: #555;
+    /* Чуть темнее, чтобы текст лучше читался */
+}
+
+/* ======== Конец заголовка страницы города ======== */
+
+
+/* ======== Блок рейтинга ======== */
+.rating-score {
+    color: #ff4444;
+    /* Красный цвет для рейтинга */
+    font-weight: bold;
+}
+
+.rating-count {
+    color: #0073e6;
+    /* Синий цвет для количества отзывов */
+    font-weight: bold;
+}
+
+/* Гарантируем, что пробелы не схлопнутся */
+.rating-text,
+.rating-score,
+.rating-count {
+    display: inline-block;
+    margin-right: 4px;
+    /* Добавляем небольшой отступ между элементами */
+}
+
+/* ======== Конец блока рейтинга ======== */
+
+
+/* ======== Блок Доставка и оплата ======== */
+.delivery-list {
+    list-style: none;
+    padding: 0;
+}
+
+.delivery-list li {
+    padding: 6px 0;
+    font-size: 17px;
+    color: #333;
+}
+
+.delivery-cost {
+    margin-top: 5px;
+    list-style: none;
+    padding-left: 15px;
+}
+
+.delivery-cost li {
+    font-size: 16px;
+    color: #444;
+    padding: 4px 0;
+}
+
+/* Исправление пробелов между элементами */
+.price-highlight,
+.delivery-text,
+.payment-methods {
+    display: inline-block;
+    margin-right: 4px;
+    /* Гарантируем пробелы */
+}
+
+.price-highlight {
+    color: #ff4444;
+    /* Красный цвет для сумм */
+    font-weight: bold;
+}
+
+.payment-methods {
+    color: #0073e6;
+    /* Синий цвет для методов оплаты */
+    font-weight: bold;
+}
+
+/* ======== Конец блока Доставка и оплата ======== */
+
+
+/* ======== Блок Как сделать заказ? ======== */
+.order-steps {
+    list-style: none;
+    padding: 0;
+}
+
+.order-steps li {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: #333;
+    padding: 6px 0;
+}
+
+/* Исправляем пробелы */
+.order-text {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+/* Кнопка "Посмотреть цены" */
+.order-button {
+    display: block;
+    width: 280px;
+    margin: 20px auto 50px;
+    /* Добавили нижний отступ */
+    padding: 12px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff !important;
+    /* Принудительно делаем текст белым */
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Увеличенный отступ после кнопки, чтобы блоки не прилипали */
+.order-button+* {
+    margin-top: 50px !important;
+}
+
+/* Эффект при наведении */
+.order-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 102, 0, 0.5);
+}
+
+/* Гарантируем, что текст внутри кнопки всегда белый */
+.order-button:visited,
+.order-button:active {
+    color: #ffffff !important;
+}
+
+/* ======== Конец блока Как сделать заказ? ======== */
+
+/* Гарантированный пробел после ссылки */
+.space {
+    display: inline-block;
+    width: 4px;
+}
+
+/* Гарантированный пробел после ссылки */
+
+
+/* ======== Общий стиль для блока доставки ======== */
+.sushi-ranking {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    /* Занижаем приоритет по сравнению с меню */
+}
+
+/* ======== Общий стиль для блока доставки ======== */
+.sushi-ranking {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+    position: relative;
+    border: 3px solid #ddd;
+    /* Одинаковая граница для всех */
+}
+
+/* ======== Общий стиль для блока доставки ======== */
+.sushi-ranking {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 800px;
+    position: relative;
+    border: 3px solid #ffcc00;
+    /* Жёлтая рамка */
+}
+
+/* ======== Стиль для ТОП-метки ======== */
+.rank-label {
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background: #ffcc00;
+    color: #222;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ======== Разделитель после кнопки ======== */
+.section-divider {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.section-divider::after {
+    content: "🍣 🍣 🍣";
+    font-size: 22px;
+    letter-spacing: 8px;
+}
+
+
+
+/* ======== Футер ======== */
+.footer {
+    background: #f5f5f5;
+    /* Светлый фон */
+    color: #444;
+    /* Тёмный текст */
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 2px solid #ffcc00;
+    /* Жёлтая линия сверху */
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 280px;
+    /* Отступ слева, чтобы не залезало под меню */
+}
+
+/* ======== Футер (фикс, чтобы меню его не накрывало) ======== */
+.footer {
+    position: relative;
+    /* Теперь футер всегда на своём месте */
+    z-index: 500;
+    /* Меньше, чем у меню, но гарантируем, что меню не будет сверху */
+}
+
+/* ======== Адаптация для мобильных ======== */
+@media (max-width: 768px) {
+    .footer {
+        padding-left: 20px;
+        /* На мобильных убираем большой отступ */
+
+    }
+}
+
+/* ======== Фикс переносов текста в рейтинге ======== */
+.rating-item {
+    display: block !important;
+    /* Гарантируем, что <li> ведёт себя как блочный элемент */
+    white-space: normal !important;
+    /* Разрешаем переносы */
+}
+
+/* Чтобы каждый элемент внутри переносился */
+.rating-item span {
+    display: inline;
+    /* Убеждаемся, что элементы в строку, но с переносами */
+    white-space: normal !important;
+}
+
+/* ======== Фикс h1 на мобильных (чтобы не прятался под меню) ======== */
+@media (max-width: 768px) {
+    h1 {
+        margin-top: 80px !important;
+        /* Опускаем заголовок */
+    }
+}
+
+/* ======== Блок информации о рейтинге ======== */
+.rating-info {
+    background: #f9f9f9;
+    /* Светлый фон для выделения */
+    border-left: 4px solid #ffcc00;
+    /* Цветная полоска слева для акцента */
+    padding: 12px 15px;
+    margin: 5px 0 40px 0;
+    /* Уменьшаем отступ сверху, увеличиваем снизу */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    border-radius: 5px;
+    /* Скругляем углы */
+}
+
+/* Ссылка в блоке */
+.rating-info a {
+    color: #ff6600;
+    /* Яркий цвет ссылки */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.rating-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* ======== Блок FAQ (аккордеон) ======== */
+.faq-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Кнопка-вопрос */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question:hover {
+    background: #ffcc00;
+}
+
+/* Ответ (скрыт по умолчанию) */
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Открытый вопрос */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* ======== Фикс для аккордеона FAQ ======== */
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Скрываем ответ по умолчанию */
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Если вопрос активен, показываем ответ */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Делаем кнопку интерактивной */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+/* Добавляем анимацию иконки ▼ */
+.faq-question::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+/* Если вопрос открыт, поворачиваем стрелку ▲ */
+.faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+}
+
+/* Эффект при наведении */
+.faq-question:hover {
+    background: #ffcc00;
+}
+
+/* ======== Основной контейнер ======== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ======== Воздушный заголовок на главной ======== */
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    /* Уменьшил верхний и нижний отступ */
+    background: linear-gradient(to right, #f0f8ff, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 70px;
+    /* Опустили ниже, чтобы не закрывалось жёлтой полосой */
+}
+
+.hero h1 {
+    font-size: 30px;
+    color: #222;
+    margin-bottom: 15px;
+    /* Чуть уменьшили отступ снизу */
+}
+
+.hero p {
+    font-size: 18px;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+
+
+/* ======== Список городов ======== */
+.cities-list {
+    margin-top: 30px;
+}
+
+.cities-list h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.cities-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cities-list li {
+    background: #ffcc00;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cities-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+}
+
+.cities-list li:hover {
+    background: #ff9900;
+}
+
+.cities-list a:hover {
+    color: white;
+}
+
+/* ======== Блок "Как составляется рейтинг" ======== */
+.rating-info {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating-info h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* ======== Популярные рейтинги ======== */
+.popular-rankings {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.popular-rankings h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.popular-rankings ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popular-rankings li {
+    margin-bottom: 10px;
+}
+
+.popular-rankings a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6600;
+    transition: color 0.3s;
+}
+
+.popular-rankings a:hover {
+    color: #cc4400;
+}
+
+
+/* ======== Блок видеообзоров ======== */
+.video-reviews {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-reviews h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.video-reviews p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 45%;
+    /* Два видео в строку */
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .video-container iframe {
+        width: 100%;
+        /* Одно видео в строку */
+        height: 200px;
+    }
+}
+
+/* ======== Универсальная кнопка (без подчеркивания) ======== */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ff6600;
+    /* Оранжевый фон */
+    color: white !important;
+    /* Принудительно белый текст */
+    font-weight: bold;
+    text-decoration: none !important;
+    /* Отключаем подчеркивание */
+    border-radius: 5px;
+    transition: background 0.3s, opacity 0.3s;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Эффект при наведении */
+.btn:hover {
+    background: #cc4400;
+    opacity: 0.9;
+    text-decoration: none !important;
+    /* Отключаем подчеркивание при наведении */
+}
+
+/* Гарантируем, что текст внутри кнопки ВСЕГДА белый */
+.btn:visited,
+.btn:active {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+
+/* ======== Форма обратной связи ======== */
+.contact-form {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Кнопка отправки */
+.contact-form .btn {
+    padding: 10px 15px;
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form .btn:hover {
+    background: #cc4400;
+}
+
+/* ======== Опускаем заголовок ======== */
+.contact-title {
+    margin-top: 40px;
+    /* Делаем больше отступ сверху */
+    text-align: center;
+}
+
+/* ======== Блок e-mail ======== */
+.contact-info {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.contact-info h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: #ff6600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* ======== Блок "Свяжитесь с нами" ======== */
+.contact-block {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.contact-block h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contact-block p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Стиль e-mail */
+.contact-email {
+    color: #ff6600;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+/* ======== Контейнер страницы ======== */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ======== Заголовок ======== */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ======== Сетка городов ======== */
+.cities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cities-grid a {
+    display: block;
+    background: #f9f9f9;
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+    border: 1px solid #ddd;
+    /* Тонкая серая рамочка */
+}
+
+/* Эффект при наведении */
+.cities-grid a:hover {
+    background: #ffcc00;
+    color: black;
+    border-color: #ff9900;
+    /* Делаем рамку чуть ярче */
+}
+
+/* ======== Адаптация для мобильных ======== */
+@media (max-width: 768px) {
+    .cities-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cities-grid a {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* ======== Опускаем заголовок ======== */
+.cities-title {
+    margin-top: 70px;
+    /* Отступ сверху */
+    text-align: center;
+}
+
+
+/* ======== Опускаем заголовок ======== */
+.service-title {
+    text-align: center;
+    margin-top: 80px;
+    /* Отступ больше, чтобы не закрывалось */
+    font-size: 30px;
+    color: #222;
+}
+
+.service-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 15px auto 30px;
+    line-height: 1.5;
+}
+
+/* ======== Инфоблоки ======== */
+.info-block {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    border-left: 5px solid #ffcc00;
+    /* Желтая полоса слева */
+}
+
+.info-block h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* ======== Иконки в блоках ======== */
+.info-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.info-item {
+    background: #f9f9f9;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+}
+
+/* ======== Формула расчёта рейтинга ======== */
+.rating-formula {
+    background: #f0f8ff;
+    /* Нежный голубоватый фон */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #0073e6;
+    /* Синяя полоса слева */
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.rating-formula strong {
+    color: #222;
+    font-size: 18px;
+}
+
+
+/* ======== Адаптация для мобильных ======== */
+@media (max-width: 768px) {
+    .info-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* ======== Логотип в верхнем меню ======== */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 75px;
+    /* Размер логотипа */
+    width: auto;
+    margin-right: 8px;
+    /* Отступ справа */
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+/* ======== Стиль для текста "Курсы маникюра" ======== */
+
+.logo-text {
+    font-family: 'Pacifico', cursive;
+    /* Красивый рукописный шрифт */
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+/* === Логотип как ссылка (убрали подчеркивание) === */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    /* Полностью убираем подчеркивание */
+    gap: 8px;
+    /* Расстояние между картинкой и текстом */
+    color: inherit;
+    /* Наследуем цвет текста */
+}
+
+/* === Цвет и эффект при наведении (без подчеркивания) === */
+.logo-link:hover .logo-text {
+    color: #ff6600;
+    /* Оранжевый цвет при наведении */
+    text-decoration: none !important;
+    /* Гарантируем, что подчёркивание не появится */
+    transition: color 0.3s ease-in-out;
+}
+
+
+
+
+/* ======== Боковое меню (фикс, чтобы не перекрывало футер) ======== */
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 80px);
+    /* Фиксируем высоту до футера */
+    background: #fff;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    /* Добавляем прокрутку */
+    scrollbar-width: thin;
+    /* Тонкий скролл для Firefox */
+    scrollbar-color: #ffcc00 #fff;
+    /* Цвета скроллбара */
+    z-index: 1000;
+}
+
+/* ======== Скроллбар для Webkit (Chrome, Safari) ======== */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #ffcc00;
+    /* Желтая полоса скролла */
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+/* ======== Скрываем крестик на десктопах ======== */
+.sidebar .close-btn {
+    display: none;
+    /* По умолчанию скрываем крестик */
+}
+
+/* Показываем крестик только на мобильных */
+@media (max-width: 768px) {
+    .sidebar .close-btn {
+        display: block;
+        /* Отображаем только на мобильных */
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #ff4444;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .sidebar .close-btn:hover {
+        color: #ff0000;
+    }
+}
+
+/* ======== Футер ======== */
+.footer {
+    background: #f5f5f5;
+    /* Светлый фон */
+    color: #444;
+    /* Тёмный текст */
+    padding: 15px 0;
+    font-size: 14px;
+    border-top: 2px solid #ffcc00;
+    /* Жёлтая линия сверху */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ======== Навигация в футере ======== */
+.footer-nav {
+    margin-bottom: 10px;
+    /* Отступ перед копирайтом */
+}
+
+.footer-nav a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #ff6600;
+    /* Оранжевый при наведении */
+
+}
+
+/* Ссылка "Политика конфиденциальности" */
+.footer p a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none !important;
+    transition: color 0.3s;
+}
+
+.footer p a:hover {
+    text-decoration: underline;
+    color: #cc4400;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+.footer p {
+    font-size: 12px;
+}
+
+/* ======== Блок "Популярные города" ======== */
+.popular-cities {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Заголовок блока */
+.popular-cities h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ======== Блок "Популярные города" ======== */
+.popular-cities {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Заголовок блока */
+.popular-cities h2 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ======== Сетка городов ======== */
+.cities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Кнопки-городов */
+.cities-grid a {
+    display: block;
+    background: #f9f9f9;
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    /* Полностью убираем подчеркивание */
+    font-weight: bold;
+    color: #222;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+    border: 1px solid #ddd;
+    /* Тонкая серая рамка */
+}
+
+/* Эффект при наведении */
+.cities-grid a:hover {
+    background: #ffcc00;
+    color: black;
+    border-color: #ff9900;
+    /* Делаем рамку чуть ярче */
+    text-decoration: none !important;
+    /* Гарантируем отсутствие подчеркивания */
+}
+
+/* Кнопка "Все города" */
+.all-cities-link {
+    margin-top: 15px;
+}
+
+.btn-all-cities {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    font-weight: bold;
+    text-decoration: none !important;
+    /* Убираем подчеркивание */
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+}
+
+.btn-all-cities:hover {
+    background: #cc4400;
+    transform: scale(1.05);
+    text-decoration: none !important;
+    /* Убираем подчеркивание даже при наведении */
+}
+
+
+/* ======== Адаптация для мобильных ======== */
+@media (max-width: 768px) {
+    .cities-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cities-grid a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .btn-all-cities {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* ======== Кнопка "Смотреть цены" ======== */
+.order-button-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.order-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 10px rgba(255, 102, 0, 0.3);
+}
+
+/* Эффект при наведении */
+.order-button:hover {
+    background: linear-gradient(135deg, #ff5500, #cc2200);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 102, 0, 0.4);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .order-button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+}
+
+/* ======== Рекламная пометка ======== */
+.ad-disclaimer {
+    font-size: 13px;
+    color: #666;
+    background: #f9f9f9;
+    border-left: 4px solid #ffcc00;
+    padding: 10px 15px;
+    margin-top: 40px;
+    border-radius: 6px;
+}
+
+
+/* Подсказка (уже была, дублирую для полноты) */
+.diploma-tooltip {
+    position: relative;
+    display: inline-block;
+    color: #0073e6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.diploma-tooltip .footnote {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.diploma-tooltip:hover .footnote::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: normal;
+    z-index: 10;
+    max-width: 250px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .diploma-tooltip .footnote::after {
+        font-size: 14px;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Подсказка (уже была, дублирую для полноты) */
+.diploma-tooltip {
+    position: relative;
+    display: inline-block;
+    color: #0073e6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.diploma-tooltip .footnote {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.diploma-tooltip:hover .footnote::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: normal;
+    z-index: 10;
+    max-width: 250px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .diploma-tooltip .footnote::after {
+        font-size: 14px;
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Секция скидки */
+.discount-note {
+    background: #ffefc2;
+    color: #b84e00;
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin: 10px 0 20px;
+    font-size: 14px;
+}
+
+/* Разделитель (есть в стилях, но если нет) */
+.section-divider {
+    text-align: center;
+    margin: 30px auto;
+    border: none;
+    background: none;
+}
+
+.section-divider::after {
+    content: "💅";
+    font-size: 22px;
+    letter-spacing: 8px;
+    display: inline-block;
+    color: #ff66a0;
+}
+
+
+.discount-banner {
+    background: linear-gradient(135deg, #ffe0cc, #ffb3a7);
+    color: #a13700;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Заголовок блока */
+.sushi-section h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Дополнительная инфографика сверху */
+.info-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    background: #f9f9f9;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Заголовки внутренних блоков */
+.info-block h4 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-note {
+    font-size: 14px;
+    color: #999;
+    font-weight: normal;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .info-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 90%;
+    }
+
+    .info-block h4 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .small-note {
+        align-self: flex-start;
+    }
+}
+
+/* === Блок: Программа обучения === */
+.program-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.program-summary span {
+    background: #f5f5f5;
+    padding: 6px 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.program-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.program-list>li {
+    margin-bottom: 15px;
+}
+
+.program-list ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    .program-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-summary span {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* === Конец блока: Программа обучения === */
+
+/* === Блок: Программа обучения (таблица) === */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.program-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.program-table thead {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.program-table th {
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.program-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+/* Зебра: чередование строк */
+.program-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Выделение цифр */
+.program-table td span.price-highlight {
+    display: inline-block;
+    font-weight: bold;
+    color: #ff4444;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .program-table {
+        font-size: 13px;
+    }
+
+    .program-table th {
+        font-size: 14px;
+    }
+
+    .program-summary {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .program-summary span {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* === Конец блока: Программа обучения (таблица) === */
+
+/* === Блок: Чему вы научитесь === */
+
+/* Список навыков */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #333;
+}
+
+.skills-list li {
+    background: #fdfdfd;
+    padding: 10px 15px;
+    padding-left: 20px !important;
+    border-left: 4px solid #ffcc00;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+/* Карточки с результатами */
+.skills-results {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.skills-result-item {
+    flex: 1 1 20%;
+    max-width: 32%;
+    min-width: 200px;
+    background: #fffefc;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.skills-result-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4444;
+    margin-bottom: 5px;
+}
+
+.skills-result-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .skills-list {
+        font-size: 14px;
+    }
+
+    .skills-results {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-result-item {
+        max-width: 90%;
+    }
+}
+
+/* === Конец блока: Чему вы научитесь === */
+
+/* === Разделитель между курсами === */
+.section-divider {
+    text-align: center;
+    margin: 40px auto;
+    border: none;
+    background: none;
+}
+
+.section-divider::after {
+    content: "💅💅💅";
+    font-size: 22px;
+    letter-spacing: 8px;
+    display: inline-block;
+    color: #ff66a0;
+}
+
+/* === Конец разделителя между курсами === */
+
+/* === Блок: Сравнительная таблица курсов === */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.comparison-table thead {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+/* Зебра: чередование строк */
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Эффект наведения строки */
+.comparison-table tbody tr:hover {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s;
+}
+
+/* Ссылки в таблице */
+.comparison-table a {
+    color: #ff6600;
+    /* Оранжевый цвет ссылок */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.comparison-table a::after {
+    /*content: " 👉"; Стрелочка после ссылки */
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.comparison-table a:hover {
+    text-decoration: underline;
+    color: #cc5200;
+    /* Цвет темнее при наведении */
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .comparison-table {
+        font-size: 13px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px 12px;
+    }
+}
+
+/* === Конец блока: Сравнительная таблица курсов === */
+
+/* === Лёгкая зебра для сайдбара === */
+.side-menu li:nth-child(even) {
+    background-color: #f7f7f7;
+    /* Светло-серый или любой другой лёгкий фон */
+}
+
+/* Можно чуть добавить плавность при наведении */
+.side-menu li:hover {
+    background-color: #fffae6;
+    /* Нежно-жёлтый фон при наведении */
+    transition: background-color 0.3s;
+}
+
+/* === Конец оформления зебры в сайдбаре === */
+
+/* === Адаптивная настройка логотипа и текста для мобильных === */
+@media (max-width: 768px) {
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-img {
+        width: 60px;
+        /* увеличиваем логотип */
+        height: auto;
+    }
+
+    .logo-text {
+        font-size: 12px;
+        /* уменьшаем текст */
+        margin-left: 4px;
+        /* оставляем небольшой отступ */
+    }
+}
+
+/* === Адаптивная настройка кнопки "Смотреть отзывы" на мобильных === */
+@media (max-width: 768px) {
+    .order-button {
+        padding: 8px 12px;
+        /* меньше отступы */
+        font-size: 14px;
+        /* чуть мельче шрифт */
+        max-width: 200px;
+        /* ограничение ширины */
+        text-align: center;
+        white-space: nowrap;
+        /* не переносить текст */
+    }
+}
+
+
+.stylish-block {
+    background: #fffdea;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+    margin-bottom: 2em;
+}
+
+.highlight-yellow {
+    color: #d4a300;
+    font-weight: bold;
+}
+
+.dialog-bubble {
+    background: #fff8dc;
+    border-left: 4px solid #ffc107;
+    padding: 12px 16px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.dialog-bubble .client {
+    color: #8d6d00;
+    font-weight: bold;
+}
+
+.dialog-bubble .you {
+    color: #4a7900;
+    font-weight: bold;
+}
+
+.quote-box {
+    background: #fffdf4;
+    border-left: 5px solid #ffca28;
+    padding: 14px 18px;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-style: italic;
+}
+
+/* Светлый акцентный блок */
+.light-block {
+    background: #fffef9;
+    border-left: 4px solid #ffe066;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 6px rgba(255, 204, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+/* Визуально выделенный диалог */
+.yellow-dialog {
+    background: #fffdf2;
+    border-left: 4px solid #ffeb99;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-style: italic;
+    color: #444;
+}
+
+.dialog-label {
+    font-weight: bold;
+    color: #997a00;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Мягкая цитата внизу */
+.soft-quote {
+    background: #fdfdfb;
+    border-left: 4px solid #ffe066;
+    padding: 14px 18px;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Эмоджи по центру строки */
+.emoji {
+    display: inline-block;
+    transform: translateY(2px);
+}
+
+
+.with-image .image-text-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.image-column {
+    flex: 1 1 40%;
+    min-width: 250px;
+}
+
+.text-column {
+    flex: 1 1 55%;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .with-image .image-text-flex {
+        flex-direction: column;
+    }
+
+    .image-column,
+    .text-column {
+        flex: 1 1 100%;
+    }
+
+    .image-column {
+        text-align: center;
+    }
+}
+
+/* Карточка блока честности */
+.honesty-card {
+    background: #fffef9;
+    border: 2px solid #ffe08a;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(255, 204, 0, 0.08);
+    max-width: 800px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Заголовок блока */
+.honesty-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Эмодзи справа от заголовка */
+.honesty-card .emoji {
+    font-size: 20px;
+    transform: translateY(2px);
+}
+
+/* Блок с прямой речью */
+.dialog-box {
+    background: #fff8e1;
+    border-left: 4px solid #ffcc00;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-style: italic;
+    margin: 20px 0;
+    color: #444;
+}
+
+/* Примечание внизу */
+.honesty-note {
+    background: #fff9e6;
+    border: 1px dashed #ffd966;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #5c4b00;
+    margin-top: 20px;
+}
+
+
+/* === Комикс-блок с иллюстрацией слева === */
+.honesty-comic {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    background: #fffef9;
+    border: 2px solid #ffe08a;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(255, 204, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+/* Колонка с изображением */
+.comic-image {
+    flex: 1 1 40%;
+    min-width: 260px;
+}
+
+/* Колонка с текстом */
+.comic-text {
+    flex: 1 1 55%;
+    min-width: 280px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Заголовок с иконкой */
+.comic-text h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Иконка-жёлтый кружок */
+.comic-text .emoji {
+    font-size: 20px;
+    transform: translateY(2px);
+}
+
+/* Реплика в стиле речевого пузыря */
+.speech-bubble {
+    background: #fff8e1;
+    border-left: 4px solid #ffcc00;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #444;
+}
+
+/* Выделение добросовестности */
+.honesty-note {
+    background: #fff9e6;
+    border: 1px dashed #ffd966;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #5c4b00;
+    margin-top: 20px;
+}
+
+/* Изображение внутри блока */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .honesty-comic {
+        flex-direction: column;
+    }
+
+    .comic-image,
+    .comic-text {
+        flex: 1 1 100%;
+    }
+
+    .comic-text {
+        padding-top: 10px;
+    }
+}
+
+
+.cookie-notice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(253, 246, 227, 0.97);
+    border-top: 1px solid #e0d4a5;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+    z-index: 9999;
+}
+
+.cookie-notice p {
+    margin: 0;
+    flex: 1;
+    line-height: 1.3;
+}
+
+.cookie-notice a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.cookie-notice button {
+    flex-shrink: 0;
+    background: #ffd366;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.cookie-notice button:hover {
+    background: #ffc633;
+}
+
+@media (max-width: 600px) {
+    .cookie-notice {
+        flex-direction: row;
+        padding: 6px 10px;
+        font-size: 11px;
+        gap: 8px;
+    }
+
+    .cookie-notice button {
+        padding: 5px 14px;
+        font-size: 12px;
+    }
+}
+
+/* === Блок: Страница-подборка (collection page) === */
+
+/* Компактная карточка курса */
+.course-card-compact {
+    background: #fffef9;
+    border: 2px solid #ffe08a;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(255, 204, 0, 0.08);
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.course-card-compact:hover {
+    box-shadow: 0 4px 16px rgba(255, 204, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.course-card-compact h3 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #222;
+}
+
+.course-card-compact h3 a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.course-card-compact h3 a:hover {
+    color: #cc5200;
+    text-decoration: underline;
+}
+
+/* Мета-информация карточки */
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-meta span {
+    background: #f5f5f5;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Описание карточки */
+.card-description {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin: 10px 0 15px;
+}
+
+/* Обёртка для таблицы сравнения (горизонтальный скролл на мобильных) */
+.comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+/* Маленькая кнопка CTA для таблицы */
+.order-button-sm {
+    display: inline-block;
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+/* Блок «Как выбрать курс» */
+.how-to-choose {
+    background: #f9fdf7;
+    border-left: 4px solid #66bb6a;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 15px 0 25px;
+}
+
+.how-to-choose ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.how-to-choose li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e8f5e9;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.how-to-choose li:last-child {
+    border-bottom: none;
+}
+
+.how-to-choose li strong {
+    color: #2e7d32;
+}
+
+/* Похожие подборки */
+.related-collections {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin: 15px 0 25px;
+}
+
+.related-collections ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.related-collections li {
+    flex: 1 1 45%;
+    min-width: 200px;
+}
+
+.related-collections a {
+    display: block;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.related-collections a:hover {
+    border-color: #ffcc00;
+    background: #fffef5;
+}
+
+/* Адаптивность для подборок */
+@media (max-width: 768px) {
+    .course-card-compact {
+        padding: 15px 18px;
+    }
+
+    .course-card-compact h3 {
+        font-size: 18px;
+    }
+
+    .card-meta {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .related-collections ul {
+        flex-direction: column;
+    }
+
+    .related-collections li {
+        flex: 1 1 100%;
+    }
+
+    .how-to-choose {
+        padding: 15px 18px;
+    }
+
+    /* Таблица сравнения — компактнее на мобильных */
+    .comparison-table th,
+    .comparison-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+
+    .comparison-table {
+        font-size: 12px;
+    }
+
+    .order-button-sm {
+        padding: 4px 8px !important;
+        font-size: 11px !important;
+    }
+}
+
+/* === Конец блока: Страница-подборка === */
